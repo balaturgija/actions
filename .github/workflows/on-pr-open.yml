@@ -1,0 +1,12 @@
+name: On PR Open
+on:
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output github context
+        run: echo "${{ toJSON(github)}}"
