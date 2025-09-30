@@ -1,12 +1,19 @@
-name: On PR Open
-on:
-  pull_request:
-    types:
-      - opened
-  workflow_dispatch:
-jobs:
-  info:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Output github context
-        run: echo "${{ toJSON(github)}}"
+# name: On PR Open
+# on:
+#   pull_request:
+#     types:
+#       - opened
+#   workflow_dispatch:
+#   push:
+#     branches:
+#       - main
+#       - develop-* # dev-something dev-some-something-something-else
+#       - feature/** # feature/something feature/some/something-something-else
+#     paths-ignore:
+#       - .github/workflows/*
+# jobs:
+#   info:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Output github context
+#         run: echo "${{ toJSON(github)}}"
